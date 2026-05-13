@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Test Chat</title>
+</head>
+<body>
+  <h1>Test Embedded Messaging</h1>
+
+  <script type="text/javascript">
+    function initEmbeddedMessaging() {
+      try {
+        embeddedservice_bootstrap.settings.language = 'es_MX';
+        embeddedservice_bootstrap.init(
+          '00DWH000002kePV',
+          'Herigem_WEB',
+          'https://herigem1--developer.sandbox.my.site.com/ESWHerigemWEB1761053968122',
+          { scrt2URL: 'https://herigem1--developer.sandbox.my.salesforce-scrt.com' }
+        );
+      } catch (err) {
+        console.error('Error loading Embedded Messaging: ', err);
+      }
+    };
+  </script>
+  <script
+    type="text/javascript"
+    src="https://herigem1--developer.sandbox.my.site.com/ESWHerigemWEB1761053968122/assets/js/bootstrap.min.js"
+    onload="initEmbeddedMessaging()"
+  ></script>
+</body>
+</html>
